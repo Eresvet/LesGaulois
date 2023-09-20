@@ -30,4 +30,13 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 	}
+	
+	public static void main(String[] args) {
+		Romain jules;
+		jules = new Romain("Jules", 5);
+		
+		jules.parler("Oui ");
+		
+		jules.recevoirCoup(8);
+	}
 }

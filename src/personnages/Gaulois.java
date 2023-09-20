@@ -3,7 +3,7 @@ package personnages;
 public class Gaulois {
 	private String nom;
 	private int force;
-	private int effetPotion;
+	private int effetPotion = 1;
 	
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -35,7 +35,16 @@ public class Gaulois {
 	}
 	
 	public static void main(String[] args) {
+		Gaulois asterix;
+		asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix);
 		
+		asterix.parler("Hey ");
+		
+		Romain jules;
+		jules = new Romain("Jules", 5);		//création d'un romain Jules pour test
+		
+		asterix.frapper(jules);
 	}
 }
 
