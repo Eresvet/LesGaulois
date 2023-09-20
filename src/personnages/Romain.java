@@ -32,11 +32,11 @@ public class Romain {
 	}
 	
 	public static void main(String[] args) {
-		Romain jules;
-		jules = new Romain("Jules", 5);
+		Romain minus;
+		minus = new Romain("Minus", 6);
 		
-		jules.parler("Oui ");
+		minus.parler("Oui ");
 		
-		jules.recevoirCoup(8);
+		minus.recevoirCoup(8);
 	}
 }
