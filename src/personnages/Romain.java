@@ -18,14 +18,14 @@ public class Romain {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le romain " + nom + " : ";
 	}
 	
 	public void recevoirCoup(int forceCoup) {
 		force -= forceCoup;
 		if (force > 0) {
-			parler("A�e");
+			parler("Aïe");
 		}else{
 			parler("J'abandonne...");
 		}

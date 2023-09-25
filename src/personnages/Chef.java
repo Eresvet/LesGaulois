@@ -22,7 +22,7 @@ public class Chef {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le chef " + nom + " du village " + village.getNom() + " : ";
 	}
 	

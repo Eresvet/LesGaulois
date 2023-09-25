@@ -23,12 +23,12 @@ public class Druide {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 	
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le druide " + nom + " : ";
 	}
 	
 	
-	private void preparerPotion() {
+	public void preparerPotion() {
 		Random random = new Random();
 		int forcePotion = random.nextInt((effetPotionMax - effetPotionMin) + 1) + effetPotionMin;
 		if(forcePotion > 7) {

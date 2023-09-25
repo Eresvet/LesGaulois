@@ -19,19 +19,24 @@ public class Gaulois {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
 
-	private String prendreParole() {
+	public String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
 
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la m�choire de "
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de "
 		+ romain.getNom());
-		romain.recevoirCoup(force / 3);
+		romain.recevoirCoup((force / 3)*effetPotion);
 	}
 	
 	@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
+	}
+	
+	public void boirePotion(int forcePotion) {
+		effetPotion = forcePotion;
+		parler("Merci Druide, je sens que ma force est " + forcePotion + " fois décuplée.");
 	}
 	
 	public static void main(String[] args) {
@@ -42,9 +47,13 @@ public class Gaulois {
 		asterix.parler("Hey ");
 		
 		Romain jules;
-		jules = new Romain("Jules", 5);		//cr�ation d'un romain Jules pour test
+		jules = new Romain("Jules", 5);		//création d'un romain Jules pour test
+		
+		asterix.boirePotion(5);
 		
 		asterix.frapper(jules);
+		
+		
 	}
 }
 
